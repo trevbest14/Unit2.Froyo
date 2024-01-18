@@ -3,29 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="javascript.js"></script>
   <title>Froyo Order Tracker</title>
+
 </head>
 <body>
-
-<script>
-  // Prompt the user to enter a list of comma-separated froyo flavors
-  var flavorsInput = prompt("Enter a list of comma-separated froyo flavors:");
-
-  // Split the input string into an array of flavors
-  var flavorsArray = flavorsInput.split(',');
-
-  // Create an object to store the count of each flavor
-  var flavorCount = {};
-
-  // Loop through the array and count the occurrences of each flavor
-  flavorsArray.forEach(function (flavor) {
-    var trimmedFlavor = flavor.trim(); // Remove leading and trailing spaces
-    flavorCount[trimmedFlavor] = (flavorCount[trimmedFlavor] || 0) + 1;
-  });
-
-  // Log the flavor count to the console
-  console.table(flavorCount);
-</script>
+    <h1>Froyo Flavor Count</h1>
+<!-- Add an empty table element to display the information -->
+<table id="flavorTable" border="1">
+  <thead>
+    <tr>
+      <th>Flavor</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Flavor counts will be added -->
+  </tbody>
+</table>
 
 </body>
 </html>
